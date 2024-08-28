@@ -1,0 +1,131 @@
+.band {
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 80px;
+  
+  
+    @media (min-width: 22.5em) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    @media (min-width: 60em) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .band .text {
+    font-size: 50px;
+    font-style: italic;
+    color: red;
+  }
+  
+  .card {
+    background: white;
+    text-decoration: none;
+    color: #444;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+    max-width: 350px;
+    min-width: 75px;
+    top: 0;
+    transition: all .1s ease-in;
+  
+    &:hover {
+      top: -15px;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    }
+  
+    article {
+      padding: 20px;
+      flex: 1;
+  
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    h1 {
+      font-size: 13px;
+      margin: 0;
+      color: #333;
+    }
+  
+    p {
+      flex: 1;
+      line-height: 1.4;
+    }
+  
+    span {
+      font-size: 12px;
+      font-weight: bold;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin: 2em 0 0 0;
+    }
+  
+    .thumb {
+      padding-bottom: 60%;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+  
+  .button {
+    background-color: #17dc34;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form {
+    max-width: 400px;
+    display: flex;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 40px;
+    padding: 2px;
+    background: #ffffff;
+    min-width: 18% !important;
+    border-radius: 2px;
+    border: 1px solid rgba(155, 155, 155, 0.2);
+    z-index: -1;
+  
+  }
+  
+  form .search-data {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    color: #000000;
+    font-size: 17px;
+    border: none;
+    font-weight: 500;
+    background: none;
+    position: relative;
+  }
+  
+  form button {
+    padding: 0 15px;
+    color: #fff;
+    font-size: 17px;
+    background: #e63600;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background: #00e626;
+  }

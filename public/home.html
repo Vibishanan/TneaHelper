@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/t.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="top_navbar">
+            <div class="hamburger">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+            <div class="top_menu">
+                <div class="logo">
+                    TNEA
+                </div>
+                <ul>
+                    <li><button type="button" id="logout">Sign Out</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <ul>
+                <li><a href="./home.html" id="home">
+                        <span class="icon"><i class="fas fa-book"></i></span>
+                        <span class="title">Home</span>
+                    </a></li>
+                <li><a href="./input.html" id="add">
+                        <span class="icon"><i class="fas fa-file-video"></i></span>
+                        <span class="title">Add College</span>
+                    </a></li>
+                <li><a href="./contact.html" id="review">
+                        <span class="icon"><i class="fas fa-volleyball-ball"></i></span>
+                        <span class="title">Add review</span>
+                    </a></li>
+                <li><a href="./review.html" id="viewall">
+                        <span class="icon"><i class="fas fa-blog"></i></span>
+                        <span class="title">See others reviews</span>
+                    </a></li>
+
+            </ul>
+        </div>
+        <div class="main_container" style="position: relative; margin-top: 5%;">
+            <form action="#">
+                <input type="search" class="search-data" id="search-data" placeholder="Search">
+                <button class="fas fa-search" id="search">Search</button>
+            </form>
+            <div class="band">
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script defer type="module" src="./scripts/home.js"></script>
+<script>
+    document.getElementById("home").classList.add("active");
+    const menuBtn = document.querySelector(".menu-icon span");
+    const searchBtn = document.querySelector(".search-icon");
+    const cancelBtn = document.querySelector(".cancel-icon");
+    const items = document.querySelector(".nav-items");
+    const form = document.querySelector("form");
+    menuBtn.onclick = () => {
+        items.classList.add("active");
+        menuBtn.classList.add("hide");
+        searchBtn.classList.add("hide");
+        cancelBtn.classList.add("show");
+    }
+    cancelBtn.onclick = () => {
+        items.classList.remove("active");
+        menuBtn.classList.remove("hide");
+        searchBtn.classList.remove("hide");
+        cancelBtn.classList.remove("show");
+        form.classList.remove("active");
+        cancelBtn.style.color = "#ff3d00";
+    }
+    searchBtn.onclick = () => {
+        form.classList.add("active");
+        searchBtn.classList.add("hide");
+        cancelBtn.classList.add("show");
+    }
+</script>
+
+</html>
